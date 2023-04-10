@@ -13,18 +13,22 @@ function escopoFuncion() {
 
 console.log("Escopo da função", escopoFuncion())
 
+console.log("Fora do escopo", numero);
+
 console.log("----------------------------------");
 
-var text = "A"
-console.log("Fora do escopo da text", text)
+var letra = "A"
+console.log("Fora do escopo da letra", letra)
 
 {
-  var text = "B"
-  console.log("Dentro do escopo da text", text)
+  var letra = "B"
+  console.log("Dentro do escopo da letra", letra)
 }
 
 function escopovar() {
-    var text = "C"
-    return text
+    var letra = "C"
+    return letra
 }
-console.log("Dentro do escopo da função text", escopovar())
+console.log("Dentro do escopo da função letra", escopovar())
+
+console.log("Fora do escopo da letra", letra)
