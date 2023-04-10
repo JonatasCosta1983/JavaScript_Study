@@ -1,19 +1,30 @@
-var numero = 1
+let numero = 1
+console.log("Fora do escopo", numero);
 
 {
-    var numero = 2
-    console.log(numero)
+    let numero = 2
+    console.log("Dentro da escopo", numero);
 }
 
-console.log(numero)
+function escopoFuncion() {
+    let numero = 3
+    return numero
+}
 
+console.log("Escopo da função", escopoFuncion())
 
+console.log("----------------------------------");
 
-let numero2 = 2
+var text = "A"
+console.log("Fora do escopo da text", text)
 
 {
-    let numero2 = 3
-    console.log(numero2);
+  var text = "B"
+  console.log("Dentro do escopo da text", text)
 }
 
-console.log(numero2);
+function escopovar() {
+    var text = "C"
+    return text
+}
+console.log("Dentro do escopo da função text", escopovar())
